@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/d3@4.13.0/build/d3.js"
+      integrity="sha256-j2LsvgOlQFIb2Mphb+tX7d5pNmFdpsJU+s5GNo3z63g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"
+    ></script>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Movie explorer</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h2>Movie Explorer - For The True Movie Lovers</h2>
+
+      <div class="row">
+        <div class="col-1">
+        <div class="filter-box">
+          <h4>Filter</h4>
+
+          <div class="form-group">
+            <label class="control-label">Number of votes</label>
+            <div class="slider votes-slider"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Year released</label>
+            <div class="slider year-slider"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label"
+              >Dollars at Box Office (millions)</label
+            >
+            <div class="slider dollars-slider"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Genres</label>
+            <select class="genre-select"></select>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Search</label>
+            <div class="search-input-box">
+              <input class="search-input"></select>
+              <button>Search</button>
+            </div>
+          </div>
+        </div>
+        <div class="pie-chart">
+          <h4>Genres Proportion</h4>
+        </div>
+      </div>
+
+        <div class="chart-box">
+          <div class="chart">
+            <div class="checkbox-awards">
+              <input type="checkbox" />
+              <span>Only show awarded movies</span>
+            </div>
+          </div>
+          <div class="axis-box">
+            <div class="form-group">
+              <label class="control-label">X Axis</label>
+              <select class="x-axis-select"></select>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">Y Axis</label>
+              <select class="y-axis-select"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <p class="no-data-info">Click a movie to view details.</p>
+          <div class="info-content">
+            <h2></h2>
+            <div class="img-box">
+              <a href="" target="_blank">
+                <img />
+              </a>
+              <div style="font-size: 12px;">click the poster to see more information on IMDb</div>
+            </div>
+            <div class="info-row">
+              <label>Rating: </label>
+              <span class="info-rating"></span>
+            </div>
+            <div class="info-row">
+              <label>Genre: </label>
+              <span class="info-genre"></span>
+            </div>
+            <div class="info-row">
+              <label>Director: </label>
+              <span class="info-director"></span>
+            </div>
+            <div class="info-row">
+              <label>Actors: </label>
+              <span class="info-actors"></span>
+            </div>
+            <div class="info-row">
+              <label>Plot: </label>
+              <span class="info-plot"></span>
+            </div>
+            <div class="info-row">
+              <label>Country: </label>
+              <span class="info-country"></span>
+            </div>
+            <div class="info-row">
+              <label>Awards: </label>
+              <span class="info-awards"></span>
+            </div>
+            <div class="info-row">
+              <label>imdbID: </label>
+              <span class="info-imdb-id"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tooltip">
+        <h4 class="movie-name"></h4>
+        <div class="movie-year"></div>
+      </div>
+
+      <div class="pie-tooltip">
+      </div>
+    </div>
+
+    <hr />
+    <div class="more-info-box">
+      <div>Data sourced from IMDb and OMDb API</div>
+      
+      
+    </div>
+
+    <script src="data/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
